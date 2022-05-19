@@ -23,4 +23,5 @@ CREATE TABLE users(
     PRIMARY KEY (id),
     INDEX (username)
 );
+
 INSERT INTO users (username, password) VALUES ('admin', 'admin');

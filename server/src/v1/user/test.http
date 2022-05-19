@@ -1,0 +1,62 @@
+@host = http://127.0.0.1:6000/v1/users
+
+GET {{host}}/?fields=name,id&offset=0&limit=5 HTTP/1.1
+
+###
+POST {{host}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 0,
+    "name": "Sioming"
+}
+
+###
+POST {{host}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 0,
+    "name": "Xiaoming"
+}
+
+###
+POST {{host}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 0,
+    "name": "Mingming"
+}
+
+
+###
+PUT {{host}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 8,
+    "name": "Ereng"
+}
+
+
+###
+DELETE {{host}}/ HTTP/1.1
+Content-Type: application/json
+
+[14,15]
+
+
+
+### 
+GET {{host}}/12?fields=name,id HTTP/1.1
+
+
+###
+PUT {{host}}/6 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Mingkay"
+}
+
