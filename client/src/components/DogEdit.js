@@ -16,21 +16,20 @@ const DogEdit = ({ updateHandler }) => {
     updateHandler(dog);
     navigate("/dogs");
   };
-
   return (
     <form onSubmit={formHandler}>
       <div>
-        <label style={{ margin: 20 }}>ID: {dog.id}</label>
-        <label style={{ margin: 20 }}>Name</label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
-        <button style={{ margin: 20 }}>Update</button>
+        <label>ID: {dog.id}</label>
       </div>
+      <label>Name</label>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => {
+          setName(e.target.value);
+        }}
+      />
+      <button>Update</button>
     </form>
   );
 };

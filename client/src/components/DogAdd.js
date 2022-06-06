@@ -13,19 +13,16 @@ const DogAdd = ({ addHandler }) => {
     addHandler({ id: 0, name });
     navigate("/dogs");
   };
-
   return (
     <form onSubmit={formHandler}>
-      <div>
-        <label style={{ margin: 20 }}>Name</label>
-        <input
-          type="text"
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
-        <button style={{ margin: 20 }}>Create</button>
-      </div>
+      <label>Name</label>
+      <input
+        type="text"
+        onChange={(e) => {
+          setName(e.target.value);
+        }}
+      />
+      <button>Add</button>
     </form>
   );
 };
